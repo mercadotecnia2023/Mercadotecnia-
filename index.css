@@ -23,7 +23,7 @@ h1{
 
 
 .navbar{
-    position: fixed;
+    position: relative;
     top: 0px;
     left: 0px;
     z-index: 1;
@@ -33,25 +33,47 @@ h1{
 
 .primero{
     width: 100%;
-    height: 500px;
+    height: auto;
     color: black;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
-    top: 90px;
+    top: 0px;
     left: 0px;
-
 }
 
 .logo{ 
-    border: 5px solid black;
-    width: 300px;
+    text-align: center;
+    line-height: 300px;
+    width: 20%;
     height: 300px;
     position: relative;
     top: 0;
     left: 0;
 }
 
+
+
+.linea2{
+    background: red;
+    height: 315px;
+    width: 5px;
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 10px;
+}
+
+.linea1{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(235,17,25,1) 0%, rgba(0,212,255,1) 100%);
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
 .logo img{
+    text-align: center;
     width: 250px;
     vertical-align: top;
     height: 300px;
@@ -61,15 +83,14 @@ h1{
 
 .contenido{
     text-align: center;
-    width: 100%;
-    height: 500px;
-    background-color: red;
-    line-height: 300px;
-    border: 5px solid black;
+    width: 80%;
+    height: auto;
+
+    
+    box-shadow: 0px, 0px, 20px rgba(0, 255, 106, 0.8);
     position: relative;
     top: 0;
     left: 500;
-    
 }
 
 .segundo{
@@ -77,13 +98,14 @@ h1{
     height: 500px;
     color: black;
     display: flex;
-    position: absolute;
-    top: 550px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0px;
     left: 0px;
 }
 
 .horario{
-    border: 5px solid black;
+text-align: center;
 width: 50%;
 height: 500px;
 position: relative;
@@ -91,10 +113,74 @@ left: 0px;
 top: 0px;
 }
 
+.galeria{
+    width: 50%;
+    height: 500px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background-size: contain;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(galeriabck.jpeg) no-repeat center;
+    text-align: center;
+    line-height: 500px;
+}
+
+.btn{
+    width: 150px;
+    padding: 12px;
+    border-radius: 20px;
+    color: purple;
+    border: 3px solid #284cff;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(boton.png);
+    background-repeat: repeat-x;
+    background-position: 0 -100%;
+    transition: 1.5s ease;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-position: center;
+    color: rgb(255, 255, 255);
+}
+
+.boton{
+
+    width: 150px;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    border: 3px solid #284cff;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(boton.png);
+    background-repeat: repeat-x;
+    background-position: 0 -100%;
+    transition: 1.5s ease;
+    text-decoration: none;
+
+}
+
+
+.boton:hover{
+    background-position: center;
+    color: rgb(255, 255, 255);
+}
+
+
+
 @media screen and (max-width:400px){
     .body{
         grid-template-columns: repeat(auto-fit, minmax (200px, 1fr));
         
-    }
+}
+}
 
+@media screen and (max-width: 600px) {
+    .galeria, .horario, .logo, .contenido 
+ {
+            flex: 1 0 100%; /* Establece que cada elemento ocupe el 100% del ancho en pantallas pequeñas */
+
+}
 }
