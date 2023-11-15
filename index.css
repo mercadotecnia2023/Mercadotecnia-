@@ -177,7 +177,7 @@ top: 0px;
 }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     .galeria, .horario, .logo, .contenido 
  {
             flex: 1 0 100%; /* Establece que cada elemento ocupe el 100% del ancho en pantallas pequeñas */
